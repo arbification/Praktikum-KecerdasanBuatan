@@ -1,0 +1,41 @@
+[System]
+Name='tugas1_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='rasaMakanan'
+Range=[0 10]
+NumMFs=3
+MF1='tidakEnak':'trimf',[0 2 4]
+MF2='sedang':'trimf',[3 5 7]
+MF3='enak':'trimf',[6 8 10]
+
+[Input2]
+Name='pelayanan'
+Range=[0 10]
+NumMFs=3
+MF1='ketus':'trimf',[0 2 4]
+MF2='biasa':'trimf',[3 5 7]
+MF3='ramah':'trimf',[6 8 10]
+
+[Output1]
+Name='nilai'
+Range=[0 10]
+NumMFs=3
+MF1='buruk':'trimf',[0 2 4]
+MF2='cukup':'trimf',[3 5 7]
+MF3='baik':'trimf',[6 8 10]
+
+[Rules]
+1 1, 1 (1) : 1
+2 2, 2 (1) : 2
+3 3, 3 (1) : 2
