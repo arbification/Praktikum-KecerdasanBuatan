@@ -195,5 +195,5 @@ penyebab("Riya/Pamer"):-
 solusi("Riya/Pamer").
 solusi(Penyakit):-
     nl, nl, nl,
-    write(" Anda mengalami penyakit Hati", Penyakit),
+    write(" Anda mengalami penyakit Hati ", Penyakit),
     nl.
